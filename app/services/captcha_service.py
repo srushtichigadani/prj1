@@ -22,7 +22,7 @@ def generate_captcha_video_and_qa() -> Tuple[str, List[dict], List[str], str]:
     session_id = str(uuid.uuid4())
     video_filename = CAPTCHA_VIDEO_DIR / f"captcha_{session_id}.mp4"
 
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+    fourcc = cv2.VideoWriter_fourcc(*"avc1")
     video = cv2.VideoWriter(str(video_filename), fourcc, fps, (width, height))
 
     shape_list = [
