@@ -30,7 +30,7 @@ def get_captcha(background_tasks: BackgroundTasks):
     }
 
     # Schedule deletion of the generated video after the response is sent
-    background_tasks.add_task(_remove_file, video_path)
+    # background_tasks.add_task(_remove_file, video_path)
 
     return FileResponse(
         path=video_path,
